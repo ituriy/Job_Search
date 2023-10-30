@@ -1,18 +1,32 @@
-html {
-  font-size: 14px;
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: space-between;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.homes-grid {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    width: 80%;
 }
 
-body {
-  margin-bottom: 60px;
+.home-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 5px;
 }
+
+    .home-card img {
+        width: 90%;
+        border-radius: 10px;
+    }

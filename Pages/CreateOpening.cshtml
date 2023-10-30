@@ -2,3 +2,29 @@
 @model Job_Search.Pages.CreateOpeningModel
 @{
 }
+
+<form method="post" id="OpeningsForm" enctype="multipart/form-data">
+    <div class="container">
+        <div class="column">
+            <label>тип организации: </label>
+            <label>специальность: </label>
+
+        </div>
+        <div class="column">
+            <input type="text" name="OrganisationType" />
+            <input type="text" name="Position" />
+            
+        </div>
+        <input id="send_button" type="submit" value="Добавить" />
+    </div>
+</form>
+
+<script type="text/javascript">
+    document.getElementById("OpeningsForm").addEventListener("submit", function (event) {
+        let elements = document.getElementById("OpeningsForm").elements
+        if (elements.address.value == '' || elements.ownerName.value == '') {
+            alert("Все поля должны быть заполнены");
+            event.preventDefault();
+        }
+    }, false)
+</script>
