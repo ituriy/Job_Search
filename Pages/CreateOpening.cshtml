@@ -7,12 +7,29 @@
     <div class="container">
         <div class="column">
             <label>тип организации: </label>
+            <label>номер организации: </label>
             <label>специальность: </label>
 
         </div>
         <div class="column">
-            <input type="text" name="OrganisationType" />
-            <input type="text" name="Position" />
+            <div class="input-group mb-3">
+                  
+                <input type="text" class="form-control" placeholder="OrganisationType" aria-label="Position" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control" placeholder="OrganisationID" aria-label="id" aria-describedby="basic-addon2">
+            </div>
+           
+            <div class="dropdown" name="Position">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Position
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    
+                </ul>
+            </div>
             
         </div>
         <input id="send_button" type="submit" value="Добавить" />
